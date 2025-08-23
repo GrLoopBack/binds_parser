@@ -1,6 +1,7 @@
+(by Grok)
+
 # binds_parser
 Reads ED binds file and generates a CSV file 
-(by Grok)
 
 How to Use the ScriptPrerequisites:Ensure you have Python installed (version 3.6 or higher recommended). You can download it from python.org.
 No additional libraries are required, as the script uses standard Python modules (xml.etree.ElementTree and csv).
