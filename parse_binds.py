@@ -123,15 +123,8 @@ def parse_binds_file(input_file, output_file):
 
 def main():
     inputs = sys.argv
-    # Example usage
-#    input_file = input("Enter the path to your .binds XML file: ")  # e.g., "SOLCustom.binds"
-#    output_file = input("Enter the output CSV file name (e.g., keybinds.csv): ")  # e.g., "keybinds.csv"
-
-#    if len(sys.argv) > 1:   
     input_file = sys.argv[1]  # First argument
     output_file = sys.argv[2]
-#    else:   
-#    input_file = None  # No argument provided 
  
     # Ensure the output file has a .csv extension
     if not output_file.endswith(".csv"):
