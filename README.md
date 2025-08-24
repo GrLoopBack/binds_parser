@@ -18,9 +18,9 @@ Navigate to the directory containing the script using cd /path/to/directory.
 
 Run the script with: 
 ```
-$ python parse_binds.py SOLCustom.binds output.csv
+$ python parse_binds.py ./SOLCustom.binds output.csv
 ```
-Include the path to your .binds file (e.g., MyCustom.binds or /path/to/EDdirectory/MyCustom.binds).
+Include the path to your .binds file (e.g., ./MyCustom.binds or /path/to/EDdirectory/MyCustom.binds).
 
 Include the desired output CSV file name (e.g., keybinds.csv). If you don’t specify .csv, it will be added automatically.
 
