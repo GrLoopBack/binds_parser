@@ -1,6 +1,7 @@
 import xml.etree.ElementTree as ET
 import csv
 import os
+import sys
 
 def parse_binds_file(input_file, output_file):
     # Parse the XML file
@@ -88,13 +89,13 @@ def parse_binds_file(input_file, output_file):
             notes.append("Toggle")
 
         # Add context for specific modes (e.g., Buggy, Humanoid)
-        if action.endswith("_Buggy"):
+        if action.endswith("Buggy"):
             notes.append("SRV")
         elif action.startswith("MultiCrew"):
             notes.append("MultiCrew")
-        elif action.endswith("_Humanoid"):
+        elif action.endswith("Humanoid"):
             notes.append("On-Foot")
-
+            
         # Add modifiers to notes if any
         if modifiers:
             notes.append(f"Modifiers: {', '.join(modifiers)}")
@@ -121,10 +122,17 @@ def parse_binds_file(input_file, output_file):
         print(f"Error writing CSV file: {e}")
 
 def main():
+    inputs = sys.argv
     # Example usage
-    input_file = input("Enter the path to your .binds XML file: ")  # e.g., "SOLCustom.binds"
-    output_file = input("Enter the output CSV file name (e.g., keybinds.csv): ")  # e.g., "keybinds.csv"
-    
+#    input_file = input("Enter the path to your .binds XML file: ")  # e.g., "SOLCustom.binds"
+#    output_file = input("Enter the output CSV file name (e.g., keybinds.csv): ")  # e.g., "keybinds.csv"
+
+#    if len(sys.argv) > 1:   
+    input_file = sys.argv[1]  # First argument
+    output_file = sys.argv[2]
+#    else:   
+#    input_file = None  # No argument provided 
+ 
     # Ensure the output file has a .csv extension
     if not output_file.endswith(".csv"):
         output_file += ".csv"
