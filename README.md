@@ -18,14 +18,16 @@ Navigate to the directory containing the script using cd /path/to/directory.
 
 Run the script with: 
 ```
-$ python parse_binds.py
+$ python parse_binds.py SOLCustom.binds output.csv
 ```
-When prompted, enter the path to your .binds file (e.g., MyCustom.binds or /path/to/EDdirectory/).
+Include the path to your .binds file (e.g., MyCustom.binds or /path/to/EDdirectory/MyCustom.binds).
 
-Enter the desired output CSV file name (e.g., keybinds.csv). If you don’t specify .csv, it will be added automatically.
+Include the desired output CSV file name (e.g., keybinds.csv). If you don’t specify .csv, it will be added automatically.
 
 Output:The script generates a CSV file (e.g., keybinds.csv) in the same directory as the script.
-The **CSV** will contain columns: **Action, Device, Input, and Notes,** similar to the table I provided earlier.
+
+The CSV will contain columns: Action, Device, Input, and Notes, similar to the table I provided earlier.
+
 Open the CSV in spreadsheet software (e.g., LibreOffice) or a text editor to view the keybind mappings.
 
 # Features 
@@ -37,7 +39,9 @@ Handles Modifiers: Captures modifier keys (e.g., LeftControl, LeftAlt) for keybo
 Includes Notes: Adds details like "Inverted", "Deadzone", "Toggle", "Hold", "Secondary binding", and context (e.g., SRV, MultiCrew, On-Foot).
 
 Filters Unmapped Actions: Skips actions with {NoDevice} and empty keys to keep the output concise.
+
 Flexible Output: Writes to a CSV file that’s easy to read and manipulate.
+
 Error Handling: Includes basic error handling for invalid XML or file issues.
 
 # Example Usage
@@ -46,11 +50,9 @@ If your .binds file is located at /home/yourname/blah/Custom.binds and you want 
 
 Run the script: 
 ```
-python parse_binds.py
+python parse_binds.py SOLCustom.binds output.csv
 ```
 
-Enter home/yourname/blah/Custom.binds when prompted for the input file.
-Enter keybinds.csv when prompted for the output file.
 The script will create keybinds.csv in the same directory as the script, containing the keybind table.
 
 # Customization Options
