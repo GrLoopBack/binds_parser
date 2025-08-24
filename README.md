@@ -55,7 +55,9 @@ The script will create keybinds.csv in the same directory as the script, contain
 
 # Customization Options
 
-If you want to modify the script for specific needs, here are some suggestions:Filter by Context: Add a filter to include only specific contexts (e.g., only SRV bindings). Modify the if device and input_key block to check for specific action suffixes (e.g., _Buggy).
+If you want to modify the script for specific needs, here are some suggestions:
+
+Filter by Context: Add a filter to include only specific contexts (e.g., only SRV bindings). Modify the if device and input_key block to check for specific action suffixes (e.g., _Buggy).
 
 Sort Output: Sort the keybinds list by Action, Device, or Input before writing to CSV using sorted(keybinds, key=lambda x: x['Device']).
 
