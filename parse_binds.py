@@ -89,11 +89,11 @@ def parse_binds_file(input_file, output_file):
             notes.append("Toggle")
 
         # Add context for specific modes (e.g., Buggy, Humanoid)
-        if action.endswith("Buggy"):
+        if "Buggy" in action:
             notes.append("SRV")
-        elif action.startswith("MultiCrew"):
+        elif "MultiCrew" in action:
             notes.append("MultiCrew")
-        elif action.endswith("Humanoid"):
+        elif "_Humanoid" in action:
             notes.append("On-Foot")
             
         # Add modifiers to notes if any
